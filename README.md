@@ -1,3 +1,3 @@
-# yangzhang.dev
-Source code of my personal website: https://yangzhang.dev
+# shahanmemon.com
+Source code of my personal website: shahanmemon.com
 
