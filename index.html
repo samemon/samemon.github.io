@@ -1,1 +1,755 @@
-Hello World
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.7/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- <base href=""> --> 
+    <title>Shahan Ali Memon | Researcher at NYU</title>
+    <style>
+        body {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-family: sans-serif;
+            font-weight: lighter;
+        }
+
+        #head2 {
+            /* font-size: 24pt; */
+            color: darkblue;
+            font-family: cursive;
+        }
+
+        a {
+            color: black;
+            border-bottom: 1px dotted black;
+        }
+
+        a:hover,
+        a:active {
+            color: #DB522F;
+            text-decoration: none;
+        }
+
+        h1 a {
+            color: #6B747C;
+            border: none;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 2px solid;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: #000000;
+        }
+
+        h4 {
+            font-size: 1em;
+            font-family: sans-serif;
+            font-weight: lighter;
+            color: #000000;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        .strong {
+            color: #DB522F;
+        }
+
+        @media (max-width: 767.98px) {
+            header {
+                text-align: center;
+            }
+        }
+
+        ul.social-icons {
+            font-size: 1rem;
+            margin-top: 24px;
+            margin-bottom: 0;
+        }
+
+        ul.social-icons li::before {
+            content: '[';
+        }
+
+        ul.social-icons li::after {
+            content: ']';
+        }
+
+        ul.social-icons li a {
+            border: none;
+        }
+
+        img.portrait {
+            max-width: 100%;
+        }
+
+        @media (max-width: 767.98px) {
+            img.portrait {
+                display: block;
+                max-width: 300px;
+                margin: auto;
+            }
+        }
+
+        .annotation {
+            margin-top: -0.5em;
+            margin-bottom: 0.5em;
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        .taxonomy img {
+            max-width: 100%;
+            border:1px solid gray;
+        }
+
+        div.research-project {
+            font-size: 14px;
+            margin-bottom: 1.5rem;
+        }
+
+        div.research-project-publication {
+            font-size: 14px;
+            margin-bottom: 1.5rem;
+        }
+        
+        div.research-project-publication video {
+            max-width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        div.research-project-publication p {
+            margin-bottom: 0.3rem;
+        }
+
+        div.line-of-research {
+            background-color: #F0F0F0;
+        }
+
+        div.research-project video {
+            max-width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        div.research-project p {
+            margin-bottom: 0.3rem;
+        }
+
+        .news {
+            font-size: 15px;
+            margin-bottom: 0px;
+        }
+
+        #news-more {
+            display: none;
+        }
+
+        .tweets {
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .info {
+            border-style: none;
+            color: #BF9270;
+        }
+
+        hr.dash {
+            border-top: 1px dashed #bbbbbb;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        .switch {
+            position: relative;
+            display: block;
+            width: 32px;
+            height: 18px;
+            float: left;
+			top: 3px;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 3px;
+            right: 0;
+            bottom: -3px;
+            left: 0;
+            background-color: #ccc;
+            transition: 0.5s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 12px;
+            width: 12px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.5s;
+        }
+
+        .active .slider {
+            background-color: #DB522F;
+        }
+
+        .active .slider:before {
+            transform: translateX(14px);
+        }
+		
+		.slider.round {
+		  border-radius: 34px;
+		}
+
+		.slider.round:before {
+		  border-radius: 50%;
+		}
+    </style>
+	
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PFGW5C3');</script>
+	<!-- End Google Tag Manager -->
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48610112-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-48610112-3');
+    </script>
+
+</head>
+
+<body>
+	
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFGW5C3"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <header class="container">
+        <h1 class="float-md-left mb-0">
+            <b href=".">Shahan Ali Memon</b>
+            <a id="head2"> شاہان علی میمن</a>
+        </h1>
+        <ul class="list-inline float-md-right social-icons">
+            <li class="list-inline-item"><a href="/CV_ShahanAliMemon.pdf">CV/Resume</a></li>
+            <!-- <li class="list-inline-item"><a href="./CV_WeixinLiang.pdf">CV/Resume</a></li>
+            <li class="list-inline-item"><a href="https://www.semanticscholar.org/author/Weixin-Liang/151253861?sort=pub-date">Semantic Scholar</a></li>
+            <li class="list-inline-item"><a href="https://scholar.google.com/citations?user=7z9P1jYAAAAJ">Google Scholar</a></li> -->
+            <li class="list-inline-item"><a href="https://twitter.com/shahanmemon"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li class="list-inline-item"><a href="https://www.linkedin.com/in/shahanmemon/"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li class="list-inline-item"><a href="https://github.com/samemon"><i class="fab fa-github"></i> Github</a></li>
+            <li class="list-inline-item"><a class="email-anchor"><i class="far fa-envelope"></i> Email</a></li>
+        </ul>
+        <div class="clearfix"></div>
+        <hr>
+    </header>
+
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-xl-8 col-lg-9 col-md-8">
+
+                <p>
+                    <i>Present: </i>I'm a <a href="https://nyuad.nyu.edu/en/research/postdoctoral-research/researchers/research-bios/shahan-ali-memon.html">research associate</a> in the Computational 
+                    Social Science Lab at New York University in Abu Dhabi, advised by Prof. <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/bedoor-alshebli.html">Bedoor AlShebli</a>.
+                    I like working with large-scale datasets to study people, their communication, and their networks to understand, uncover and solve the complex and inconspicuous societal problems. 
+                    I'm currently working on multiple projects in <i>Science of Science</i>, <i>Collaboration Science</i>, and <i>Inequality</i>, in collaboration
+                    with Prof. <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/kinga-makovi.html">Kinga R. Makovi</a>, 
+                    Prof. <a href="https://nyuad.nyu.edu/en/academics/divisions/science/faculty/talal-rahwan.html">Talal Rahwan</a>, and 
+                    Prof. <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/wifag-adnan.html">Wifag Adnan</a>.
+                </p>
+
+                <p> 
+                    <i> Past: </i>I did my Master's in <a href="https://lti.cs.cmu.edu/">Language Technologies from Language Technologies Institute (LTI)</a> at Carnegie Mellon University in Pittsburgh where I was mentored by 
+                    Prof. <a href="http://www.casos.cs.cmu.edu/bios/carley/carley.html">Kathleen M. Carley</a> and Prof. <a href="https://www.cs.cmu.edu/~dmortens/">David R. Mortensen</a> on my master's thesis on 
+                    <a href="https://kilthub.cmu.edu/articles/thesis/Characterizing_Misinformed_Online_Health_Communities/12988244/1">"Characterizing Misinformed Online Health Communities."</a> I have also worked as a 
+                    research scholar at LTI for two years under the supervision of Prof. <a href="http://www.cs.cmu.edu/~rsingh/">Rita Singh</a>, and 
+                    Prof. <a href="http://mlsp.cs.cmu.edu/people/bhiksha/">Bhiksha Raj</a> working on projects in the field of <i>speech processing</i> and 
+                    <i>voice forensics</i>. 
+                    <br>I did my Bachelor's in Computer Science from <a href="https://www.qatar.cmu.edu/">Carnegie Mellon University in Qatar</a> where I was mentored by 
+                    <a href="https://ingmarweber.de/">Dr. Ingmar Weber</a> and <a href="https://scholar.google.com/citations?user=LeBn5rAAAAAJ&hl=en">Prof. Saquib Razak</a> for 
+                    my undergraduate thesis on <a href="https://www.jmir.org/2020/1/e13347/">"Lifestyle Disease Surveillance Using Population Search Behaviour."</a>
+                </p>
+
+                <p>
+                    <i>Future: </i>In my career, I have been fortunate enough to find amazing and caring advisors and collaborators who have collectively shaped my interests, and 
+                    given me opportunities to tackle interesting questions. I really have been standing on the shoulder of giants (see academic tree below). 
+                    I try to optimize for long-term collaborations and mentorship. In terms of work, 
+                    I often think about the implications of my research (albeit pessimistically :-)), and I hope to eventually be able to do something that makes some difference in the world --  
+                    the world where impact is not just measured by citations. 
+
+                </p>
+
+                <p>
+                    Home for me is where my mom (<i>ami</i>) is. For now that's Pakistan's <a href="https://en.wikipedia.org/wiki/Hyderabad,_Sindh">Hyderabad</a> uncommonly known as "The Lion City", named in the honour of Ali (aka <i> hayder</i>), the fourth caliph. 
+                </p>
+
+                <p>
+                    I love collaborating with people. So don't hesitate to reach out if you would like to collaborate with me, or just talk about life.
+                </p>
+                
+                <li class="list-inline-item"><a href="https://scholar.google.com/citations?user=mZ1mjVsAAAAJ&hl=en&oi=ao"><i class="ai ai-google-scholar"></i> Google Scholar</a></li>
+                <li class="list-inline-item"><a href="https://www.semanticscholar.org/author/S.-A.-Memon/20609745?sort=pub-date"><i class="ai ai-semantic-scholar"></i> Semantic Scholar</a></li>
+                <li class="list-inline-item"><a href="https://dblp.org/pid/203/0185.html"><i class="ai ai-dblp"></i> DBLP</a></li>
+					
+            </div>
+            <div class="offset-xl-1 col-lg-3 col-md-4">
+                <img src="/image/shahan_portrait.jpg" class="portrait" alt="a portrait of shahan ali memon">
+            </div>
+        </div>
+        
+        <div class="row taxonomy">
+            <div class="offset-xl-3 col-lg-8 mb-3">
+                <li class="list-inline-item"><a href="https://academictree.org/education/tree.php?pid=894838"><i class="bi-tree"></i> My Academic Tree</a></li>
+            </div>
+            <div class="col-lg-8 mb-3">
+                <a href="https://academictree.org/education/tree.php?pid=894838">
+                    <img src="/image/mytreewhite.png" alt="a tree diagram showing my academic advisors, their advisors, and so on">
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- left column -->
+            <div class="col-lg-8 mb-2">
+                <h2>
+                    Ongoing Research
+                </h2>
+
+                <div class="research-projects">
+					
+					
+                <div class="row research-project" data-sort="2020-05-01">
+                    <div class="col-md-4">
+                        <video loop muted playsinline poster="/research/Retraction/thumbnail.svg">
+                        </video>
+                    </div>
+
+                    <div class="col-md-8">
+                        <h6>
+							Characterizing the effect of retractions on careers of scientists
+                        </h6>
+                        <p class="text-muted">
+                            <a href="." style="color:#FF00FF;">Shahan Ali Memon</a>,
+                            <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/kinga-makovi.html">Kinga Makovi*</a>,
+                            <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/bedoor-alshebli.html">Bedoor AlShebli*</a>
+                            <br />
+                            <i class="fas fa-medal"></i> Accepted for presentation at IC2S2 2022
+                            <br />
+                            <span style="font-style:italic;">In Preparation</span>&nbsp; 
+                            <br />
+                            <a class="info" href="https://tinyurl.com/ic2s2-science"><i class="fas fa-video" aria-hidden="true"></i> Recording</a>
+                            <a class="info" href="https://docs.google.com/presentation/d/1Y8uL0_7ruo-0jXGux8aojlSrYBRauImpdX8Z5Z-OWBk/edit?usp=sharing"><i class="fas fa-file-powerpoint" aria-hidden="true"></i> Slides</a>
+                        </p>
+                        <!-- <p class="strong">
+                            <i class="fas fa-trophy"></i> Best Paper Award
+                        </p> -->
+                        
+                        <p>
+                            Retracting academic papers is a fundamental tool for social control in the academy, and in the vast majority of cases happen only under the most extreme circumstances: when the science behind papers, or the integrity of authors come into question. While retractions do not completely erase papers from the academic record, they can have important implications for retracted scientists and their careers. 
+                            In this project, we aim to uncover whether retracted authors (RQ1) retain fewer collaborators, (RQ2) gain fewer new collaborators, (RQ3) close fewer triads, and (RQ4) get penalized for public retractions, than their matched non-retracted scientists.
+                        </p>
+                    </div>
+					
+					<div class="col-md-12"> 
+						<hr class="dash">
+					</div>
+                </div>
+
+            </div>
+
+            <h2>
+                Publications
+            </h2>
+
+            <div class="research-projects">
+
+                <div class="row research-project" data-sort="2018-05-01">
+                    <div class="col-md-4">
+                        <video loop muted playsinline poster="/research/FIFAIJSC/thumbnail.webp">
+                        </video>
+                    </div>
+                    <div class="col-md-8">
+                        <h6>
+                            Perceptions of FIFA Men’s World Cup 2022 Host Nation Qatar in the Twittersphere
+                        </h6>
+                        <p class="text-muted">
+                            <a href="https://www.qatar.northwestern.edu/directory/profiles/dun-susan.html">Susan Dun</a>,
+                            <a href="https://qa.linkedin.com/in/hatimrachdi">Hatim Rachdi</a>
+                            <a href="." style="color:#FF00FF;">Shahan Ali Memon</a>,
+                            <a href="https://sites.google.com/site/yelenamejova/">Yelena Mejova</a>,
+                            <a href="https://ingmarweber.de/">Ingmar Weber</a>
+                            <br />
+                            <span style="font-style:italic;">International Journal of Sport Communication (2022; IF:1.59; Q-Index:Q2)</span>&nbsp; 
+                            <br />
+                            <i class="fas fa-medal"></i> Accepted for presentation at the 2019 NCA 105th Annual Convention
+                            <br />
+                            <a class="info" href="https://secureservercdn.net/198.71.233.46/131.c30.myftpupload.com/wp-content/uploads/2022/05/Perceptions-of-FIFA-Mens-World-Cup-2022-Host-Nation-Qatar-in-the-Twittersphere-.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i> Paper</a>
+                        </p>
+                        <p>
+                            We assessed the discussion around FIFA World Cup 2022 in the Twittersphere to shed some light on whether Qatar’s nation-branding and soft 
+                            power attempts are reflected in public perceptions.
+                        </p>
+                    </div>
+					<div class="col-md-12"> 
+						<hr class="dash">
+					</div>
+                </div>
+
+                <div class="row research-project" data-sort="2018-05-01">
+                    <div class="col-md-4">
+                        <video loop muted playsinline poster="/research/COVIDVaccinesBMC/thumbnail.png">
+                        </video>
+                    </div>
+                    <div class="col-md-8">
+                        <h6>
+                            COVID-19 vaccine perceptions in the initial phases of US vaccine roll-out: an observational study on reddit
+                        </h6>
+                        <p class="text-muted">
+                            Navin Kumar, Isabel Corpus, Meher Hans, Nikhil Harle, Nan Yang, 
+                            Curtis McDonald, Shinpei Nakamura Sakai, Kamila A Janmohamed, Weiming Tang, 
+                            Jason L Schwartz, S Mo Jones-Jang, Koustuv Saha, 
+                            <a href="." style="color:#FF00FF;">Shahan Ali Memon</a>,
+                            Chris Bauch,
+                            <a href="http://www.munmund.net/">Munmun De Chaudhury</a>,
+                            Orestis Papakyriakopoulos, 
+                            Joseph D Tucker, Abhay Goyal, 
+                            <a href="https://scholar.google.com/citations?user=BHfOiqAAAAAJ&hl=en">Aman Tyagi</a>, 
+                            Kaveh Khoshnood, 
+                            <a href="https://medicine.yale.edu/yigh/profile/saad_omer/">Saad Omer</a>
+                            <br />
+                            <span style="font-style:italic;">BMC Public Health (2022; IF:3.98)</span>&nbsp; 
+                            <br />
+                            <a class="info" href="https://link.springer.com/article/10.1186/s12889-022-12824-7"><i class="far fa-file-pdf" aria-hidden="true"></i> Paper</a>
+                        </p>
+                        <p>
+                            The purpose of this analysis was to detail the behavior of top Reddit users, 
+                            posts’ relationship with events early in the vaccine timeline, 
+                            and the relationship between subreddits that shared COVID-19 vaccine posts. 
+                            Research questions are as follows: 
+                            What is the behavior of top Reddit users in regards to COVID-19 vaccines (RQ1)?  
+                            What are Reddit posts’ relationship with events early in the vaccine timeline (RQ2)? 
+                            What is the relationship between subreddits that shared COVID-19 vaccine posts (RQ3)?
+                        </p>
+                    </div>
+					<div class="col-md-12"> 
+						<hr class="dash">
+					</div>
+                </div>
+
+
+
+                <div class="row research-project" data-sort="2018-05-01">
+                    <div class="col-md-4">
+                        <video loop muted playsinline poster="/research/HRME/thumbnail.png">
+                        </video>
+                    </div>
+                    <div class="col-md-8">
+                        <h6>
+                            Hierarchical routing mixture of experts
+                        </h6>
+                        <p class="text-muted">
+                            <a href="https://www.linkedin.com/in/waynezhaowenbo/">Wenbo Zhao</a>,
+                            <a href="https://www.linkedin.com/in/yang-gao-8702a981">Yang Gao</a>,
+                            <a href="." style="color:#FF00FF;">Shahan Ali Memon</a>,
+                            <a href="http://mlsp.cs.cmu.edu/people/bhiksha/">Bhiksha Raj</a>,
+                            <a href="http://mlsp.cs.cmu.edu/people/rsingh/index.html">Rita Singh</a>
+
+                            <br />
+                            <span style="font-style:italic;">25th International Conference on Pattern Recognition (ICPR 2020)</span>&nbsp; 
+                            <br />
+                            <a class="info" href="https://arxiv.org/pdf/1903.07756.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i> Paper</a>
+                            <a class="info" href="https://ailb-web.ing.unimore.it/icpr/media/slides/11832.pdf"><i class="fas fa-file-powerpoint" aria-hidden="true"></i> Slides</a> 
+                        </p>
+                        <p>
+                            In regression tasks, the data distribution is often too complex to be fitted by a 
+                            single model. In contrast, partition-based models are developed where data is 
+                            divided and fitted by local models. 
+                            These models partition the input space and do not leverage the input-output 
+                            dependency of multimodal-distributed data, and strong local models are needed 
+                            to make good predictions. Addressing these problems, we propose a binary 
+                            tree-structured hierarchical routing mixture of experts (HRME) model that 
+                            has classifiers as non-leaf node experts and simple regression models as 
+                            leaf node experts.
+                        </p>
+                    </div>
+					<div class="col-md-12"> 
+						<hr class="dash">
+					</div>
+                </div>
+
+                <div class="row research-project" data-sort="2018-05-01">
+                    <div class="col-md-4">
+                        <video loop muted playsinline poster="/research/VaccinationSBP/thumbnail.png">
+                        </video>
+                    </div>
+                    <div class="col-md-8">
+                        <h6>
+                            Characterizing sociolinguistic variation in the competing vaccination communities
+                        </h6>
+                        <p class="text-muted">
+                            <a href="." style="color:#FF00FF;">Shahan Ali Memon</a>,
+                            <a href="https://scholar.google.com/citations?user=LeBn5rAAAAAJ&hl=en">Aman Tyagi</a>,
+                            <a href="https://www.cs.cmu.edu/~dmortens/">David R. Mortensen</a>,
+                            <a href="http://www.casos.cs.cmu.edu/bios/carley/carley.html">Kathleen M. Carley</a>
+
+                            <br />
+                            <span style="font-style:italic;"> International Conference on Social Computing, Behavioral-Cultural Modeling & Prediction and Behavior Representation in Modeling and Simulation (SBP-BRiMS 2020)</span>&nbsp; 
+                            <br />
+                            <i class="fas fa-medal"></i> Funded by Center of Machine Learning for Health
+                            <br />
+                            <a class="info" href="https://arxiv.org/abs/2006.04334"><i class="far fa-file-pdf" aria-hidden="true"></i> Paper</a>
+                        </p>
+                        <p>
+                            Public health practitioners and policy makers grapple with the challenge of devising effective message-based interventions for debunking public 
+                            health misinformation in cyber communities. Framing and personalization of the message is one of the key features for devising a persuasive messaging strategy. 
+                            For an effective health communication, it is imperative to focus on preferencebased framing where the preferences of the target sub-community are taken into 
+                            consideration. To achieve that, it is important to understand and hence characterize the target sub-communities in terms of their social interactions. In the context 
+                            of health-related misinformation, vaccination remains to be the most prevalent topic of discord. 
+                            Hence, in this paper, we conduct a sociolinguistic analysis of the two competing vaccination communities on Twitter: 
+                            pro-vaxxers or individuals who believe in the effectiveness of vaccinations, and anti-vaxxers or individuals who are opposed to vaccinations
+                        </p>
+                    </div>
+					<div class="col-md-12"> 
+						<hr class="dash">
+					</div>
+                </div>
+
+                <div class="row research-project" data-sort="2018-05-01">
+                    <div class="col-md-4">
+                        <video loop muted playsinline poster="/research/GoogleTrends/thumbnail.png">
+                        </video>
+                    </div>
+                    <div class="col-md-8">
+                        <h6>
+                            Lifestyle Disease Surveillance Using Population Search Behavior: Feasibility Study
+                        </h6>
+                        <p class="text-muted">
+                            <a href="." style="color:#FF00FF;">Shahan Ali Memon</a>,
+                            <a href="https://scholar.google.com/citations?user=LeBn5rAAAAAJ&hl=en">Saquib Razak</a>
+                            <a href="https://ingmarweber.de/">Ingmar Weber</a>
+
+                            <br />
+                            <span style="font-style:italic;"> Journal of Medical Internet Research (2020; IF:7.08)</span>&nbsp; 
+                            <br />
+                            <i class="fas fa-medal"></i> Accepted for presentation at the Population Association of America (PAA 2021)
+                            <br />
+                            <a class="info" href="https://www.jmir.org/2020/1/e13347/"><i class="far fa-file-pdf" aria-hidden="true"></i> Paper</a>
+                            <a class="info" href="https://docs.google.com/presentation/d/1kEHrInYfxu3ZXTNyKKP7S1o7JMdbr8nNKHV6pR_BVXE/edit?usp=sharing"><i class="fas fa-file-powerpoint" aria-hidden="true"></i> Slides</a>
+                            <a class="info" href="https://github.com/samemon/JMIR_LifestyleDiseaseSurveillance"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+                            <a class="info" href="https://www.youtube.com/watch?v=J29ECR-L_OE"><i class="fas fa-video" aria-hidden="true"></i> Recording</a>
+                            <br />
+                            <a class="info" href="https://d1wqtxts1xzle7.cloudfront.net/68543881/download-with-cover-page-v2.pdf?Expires=1667155001&Signature=GuAY6aRWiKeFaHTBojdnZBq86OJixwxasO-7WjFU3Exx9Oj29G3WG5utM35xf6N~QX0tyAaAvj5eQA3Je6-t41A~hyUTmarTVJZ~aQGgXiFwdkTUqXKugF~gK8MxnnA7skzj-pu4-eCBJolz8woFPMVhTqtKFIZ0YkcxaDV5YOVhfVN2GuHjEJBnXTKRJdLrAk1QR3JGo8sPnnNZXRzjhI1GDWtX6oJUI3loac2sb8vtiK1R0phabd0P7qlHt-Ii9XPR8TRw3GpxpoonJ6KmKWLi3dn9XfYul90kCzsBc7sMOsxoXKY1CSMZYJ-uADagzOVBitexqaZd2KRFNuwBPQ__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA"><i class="fas fa-file-powerpoint" aria-hidden="true"></i> Slides for Google Trends Denormalization</a>
+                        </p>
+                        <p>
+                            As the process of producing official health statistics for lifestyle diseases is slow, 
+                            researchers have explored using Web search data as a proxy for 
+                            lifestyle disease surveillance. Existing studies, however, 
+                            are prone to at least one of the following issues: 
+                            ad-hoc keyword selection, overfitting, insufficient predictive evaluation, 
+                            lack of generalization, and failure to compare against trivial baselines. 
+                            The aims of this study were to (1) employ a corrective approach improving 
+                            previous methods; (2) study the key limitations in using Google Trends 
+                            for lifestyle disease surveillance; and (3) test the generalizability of our 
+                            methodology to other countries beyond the United States.
+                        </p>
+                    </div>
+					<div class="col-md-12"> 
+						<hr class="dash">
+					</div>
+                </div>
+
+                <div class="row research-project" data-sort="2018-05-01">
+                    <div class="col-md-4">
+                        <video loop muted playsinline poster="/research/NRT/thumbnail.png">
+                        </video>
+                    </div>
+                    <div class="col-md-8">
+                        <h6>
+                            Neural Regression Trees
+                        </h6>
+                        <p class="text-muted">
+                            <a href="." style="color:#FF00FF;">Shahan Ali Memon*</a>,
+                            <a href="https://www.linkedin.com/in/waynezhaowenbo/">Wenbo Zhao*</a>,
+                            <a href="http://mlsp.cs.cmu.edu/people/bhiksha/">Bhiksha Raj</a>,
+                            <a href="http://mlsp.cs.cmu.edu/people/rsingh/index.html">Rita Singh</a>
+
+                            <br />
+                            <span style="font-style:italic;"> International Joint Conference on Neural Networks (IJCNN 2019)</span>&nbsp; 
+                            <br />
+                            <a class="info" href="https://arxiv.org/pdf/1810.00974.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i> Paper</a>
+                            <a class="info" href="https://www.linkedin.com/posts/activity-6556898476922335234-J50N"><i class="fas fa-file-powerpoint" aria-hidden="true"></i> Slides</a> 
+                        </p>
+                        <p>
+                            Regression-via-Classification (RvC) is the process of converting a regression 
+                            problem to a classification one. Current approaches for RvC use ad-hoc 
+                            discretization strategies and are suboptimal. 
+                            We propose a neural regression tree model for RvC. 
+                            In this model, we employ a joint optimization framework where we 
+                            learn optimal discretization thresholds while simultaneously optimizing 
+                            the features for each node in the tree. 
+                        </p>
+                    </div>
+					<div class="col-md-12"> 
+						<hr class="dash">
+					</div>
+                </div>
+
+
+            </div>
+        </div>
+            <!-- /left column -->
+            <!-- right column -->
+            <div class="col-lg-4 mb-2">
+				
+                <h2>Latest News</h2>
+                <ul class="news" style="font-size: 13px">
+                    <li>[Jul 19-22 2022] Attended and <a href="https://tinyurl.com/ic2s2-science">presented</a> our work on scientific retractions at IC2S2 2022 in Chicago</li>
+                    <li>[May 18 2022] Attended and presented our work on scientific retractions at the Networks Workshop at NYU Abu Dhabi</li>
+					<li>[Apr 25 2022] Our submission on "Characterizing the effect of scientific retractions on collaboration networks" got accepted at IC2S2 2022.</li>
+					<li>[May 6 2021] Attended and presented at PAA 2021 (Remote)</li>
+					<li>[Feb 2 2021] Our <a href="https://www.jmir.org/2020/1/e13347/#ref68">JMIR paper</a> on lifestyle disease surveillance got accepted for presentation at the Population Association of America (PAA) 2021.</li>
+                    <li>[Oct 1 2020] Joined NYU Abu Dhabi as a Research Associate</li>				
+                    </ul>
+                    
+                <ul class="news" id="news-more" style="font-size: 13px">
+                    <li>[Aug 6 2020] Defended my Master's Thesis on <a href="https://kilthub.cmu.edu/articles/thesis/Characterizing_Misinformed_Online_Health_Communities/12988244/1">Characterizing Misinformed Online Health Communities</a>.</li>
+                    <li>[May 17 2020] Graduated from CMU LTI with MSc. in Language Technologies.</li>			
+                    
+                </ul>
+                <a id="toggle-more-news" href="#">More &gt;</a>
+				<br/>
+				<br/>
+				
+                <h2>Awards</h2>
+                <ul class="news" style="font-size: 13px">
+					<li>2020 Center of Machine Learning for Health Fellowship Winner</li>
+					<li>2020 SBP-BRiMS Graduate Student Scholarship</li>
+					<li>2018 Finalist for Best Overall at HackPrinceton</li>
+					<li>2018 Finalist for Best Design at HackPrinceton</li>
+					<li>2017 College Honors for Undergraduate Research Thesis</li>
+					<li>2017 Outstanding Service to the Computer Science Community</li>
+					<li>2017 Audience Choice Award at NYUAD Hackathon for Social Good</li>
+					<li>2017 Senior Student Leadership Awards</li>
+					<li>2015 IMPAQT Cultural Ambassador</li>
+                    <li>2012 Second Position at Speed Programming Competition</li>
+                    <li>2009 Sixth Position among 30k+ students in District Hyderabad in 10th Grade</li>
+					
+                </ul>
+				<br/>
+				
+                <h2>Service</h2>
+				
+                <p style="font-size: 13px">
+                    <b>Journal Review:</b> Elsevier's Information Processing and Management Journal, 2021<br />
+                    <b>Journal Review:</b> Journal of Medical Internet Research, 2020 <br />
+					<b>Conference Review:</b> IEEE International Conference on Machine Learning and Applications, 2020 <br />
+                    <b>Moderator:</b> SBP-BRiMS, 2020 <br />
+                    <b>Board Member:</b> Academic Review Board and University Disciplinary Committee (ARB-UDC), Carnegie Mellon University, 2015-2017 <br />
+                    <b>Peer Health Advocate:</b>Mental Health Advocate, Student Health Services, Carnegie Mellon University, 2016-2017
+				</p>
+				
+	
+				<br/>
+                <h2>Press</h2>
+                <ul class="news" style="font-size: 13px">
+					<li>J. Walter Thompson Amsterdam newsroom: <a href="https://jwt-amsterdam.pr.co/171577-learn-how-to-paint-from-the-master-himself-in-the-rembrandt-tutorials">Recreating the voice of Rembrandt from his self-portraits</a></li>
+					<li>CMUQ News: <a href="https://www.qatar.cmu.edu/news/nyuad-hackathon/">CMU-Q students take audience choice award at regional Hackathon</a></li>
+					<li>The National: <a href="https://www.pressreader.com/uae/the-national-news/20170422/281616715250455">Hackathon stars awarded for work on social good</a></li>
+					<li>CMUQ News: <a href="https://www.qatar.cmu.edu/news/education-conflict-zones/">Student app helps predict threats to education in conflict zones</a></li>
+					<li>Gulf Times: <a href="https://www.gulf-times.com/story/531744/CarnegieApps-Hackathon-Students-from-region-compete">CarnegieApps Hackathon: Students from region compete</a></li>
+                </ul>
+				<br/>
+                <div class="mt-3 tweets">
+                    <a class="twitter-timeline" width="100%" height="2400" href="https://twitter.com/shahanmemon">
+                        Tweets by shahanmemon
+                    </a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+				
+            </div>
+            <!-- /right column -->
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <small> &copy; 2022-2023 All rights reserved. Website template credit to Prof. Yang Zhang and Weixin Liang</a></small>
+        </div>
+            
+    </footer>
+
+</body>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+<script>
+    $('#toggle-more-news').click(function () {
+        $('#news-more').slideToggle();
+        $('#news-more').is(':visible') ? $(this).text('< Hide') : $(this).text('More >');
+        return false;
+    });
+
+    $(window).on('scroll', function () {
+        $('video').each(function () {
+            var video = this;
+            var rect = video.getBoundingClientRect();
+
+            if (
+                rect.top >= 0 && rect.left >= 0 &&
+                rect.bottom <= $(window).height() &&
+                rect.right <= $(window).width()
+            ) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    });
+
+    // var researchProjects = $('.research-projects').html();
+
+    // var researchProjectsSorted = $('div.research-project').sort(function (a, b) {
+    //     var contentA = $(a).attr('data-sort');
+    //     var contentB = $(b).attr('data-sort');
+    //     return (contentA < contentB) ? 1 : (contentA > contentB) ? -1 : 0;
+    // });
+
+    // $('.sort-by-date').click(function () {
+    //     $(this).toggleClass('active');
+    //     if ($(this).hasClass('active')) {
+    //         $('.research-projects').html(researchProjects);
+    //     } else {
+    //         $('.research-projects').html(researchProjectsSorted);
+    //     }
+    // });
+	
+	// $('.research-projects').html(researchProjectsSorted);
+
+    document.querySelectorAll('.email-anchor').forEach(function(a) {
+        a.href = 'mailto:' + ['shahan', 'nyu.edu'].join('@');
+    });
+</script>
+
+</html>
