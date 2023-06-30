@@ -403,6 +403,11 @@ div#toc a:visited { color: blue; }
 	line-height: 15px;
 }
 
+.best-paper-award {
+  color: red;
+  font-weight: bold;
+}
+
 .fun-link, .portrait {
   color:black;
   text-decoration:none;
