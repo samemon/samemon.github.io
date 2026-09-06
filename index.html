@@ -217,6 +217,35 @@
 		.slider.round:before {
 		  border-radius: 50%;
 		}
+
+		.bio-fold {
+			margin-bottom: 15px;
+		}
+		.bio-fold summary {
+			cursor: pointer;
+			list-style: none;
+			font-style: italic;
+			font-weight: bold;
+		}
+		.bio-fold summary::-webkit-details-marker {
+			display: none;
+		}
+		.bio-fold summary::before {
+			content: "›";
+			display: inline-block;
+			margin-right: 6px;
+			font-style: normal;
+			transition: transform 0.15s ease;
+		}
+		.bio-fold[open] summary::before {
+			transform: rotate(90deg);
+		}
+		.bio-fold summary:hover {
+			color: #DB522F;
+		}
+		.bio-fold p {
+			margin-top: 8px;
+		}
     </style>
 	
 	<!-- Google Tag Manager -->
@@ -281,46 +310,66 @@
             <div class="col-xl-8 col-lg-9 col-md-8">
 
                 <p>
-                    <i>Present: </i>I am a PhD candidate at the <mark style="background-color:pink;"><a href="https://ischool.uw.edu/">Information School in University of Washington</a></mark> advised by <a href="https://jevinwest.org/">Jevin D. West</a>. 
+                    <i>Present: </i>I am a PhD candidate at the <mark style="background-color:pink;"><a href="https://ischool.uw.edu/">Information School in University of Washington</a></mark> advised by <a href="https://jevinwest.org/">Jevin D. West</a>.
                     My research is funded by the <mark style="background-color:pink;"><a href="https://www.cip.uw.edu/">Center for an Informed Public</a></mark>, and can be broadly classified into <a href="https://en.wikipedia.org/wiki/Computational_social_science"><i>Computational Social Science</i></a>.
-                    <br>I study how AI is changing the institution of science —- the emerging field I call the <i>Science of AI-mediated Science</i>. 
-                    I am interested in the question: Can AI do science? Can we create mini versions of AI agents that are <i>homines silici</i>, computational analogues of us humans, who can autonomously interact and collaborate with each other and do research like a PhD student does (minus the coffee dependency, hopefully ;)). Basically, I'm trying to figure out if an AI system could someday take over my job.
-                    I also study scientific collaboration—because yes, I can have varied interests, and frankly, it's fascinating to study that! Teamwork and diverse perspectives fuel so much of what drives innovation in science.
-                    <br>I also focus on AI alignment and AI ethics. It might seem like a bit of a mixed bag, but trust me, it's all connected. How AI works, its sensemaking process, and the values embedded within it are all essential factors in developing better AI systems.
                 </p>
-                
-                <p> 
-                    <i> Past: </i>I did my Master's at <mark style="background-color:pink;"><a href="https://lti.cs.cmu.edu/">Language Technologies Institute (LTI) at Carnegie Mellon University</a></mark> in the lovely (and chilly) Pittsburgh, where I was lucky to be mentored by 
-                    <a href="http://mlsp.cs.cmu.edu/people/bhiksha/">Bhiksha Raj</a>, and 
-                    <a href="http://www.cs.cmu.edu/~rsingh/">Rita Singh</a> on various directed research projects in the field of <i>Speech Processing</i> and 
-                    <i>Voice Forensics</i>.
-                    I also completed a Master's thesis on <a href="https://kilthub.cmu.edu/articles/thesis/Characterizing_Misinformed_Online_Health_Communities/12988244/1">"Characterizing Misinformed Online Health Communities."</a> 
-                    under the guidance of <a href="http://www.casos.cs.cmu.edu/bios/carley/carley.html">Kathleen M. Carley</a> and <a href="https://www.cs.cmu.edu/~dmortens/">David R. Mortensen</a>.
-                    
-                    My Bachelor's was in <i>Computer Science</i> from <mark style="background-color:pink;"><a href="https://www.qatar.cmu.edu/">Carnegie Mellon University in Qatar</a></mark> where I was mentored by 
-                    <a href="https://ingmarweber.de/">Ingmar Weber</a> and <a href="https://scholar.google.com/citations?user=LeBn5rAAAAAJ&hl=en">Saquib Razak</a> for 
-                    my undergraduate thesis on <a href="https://www.jmir.org/2020/1/e13347/">"Lifestyle Disease Surveillance Using Population Search Behaviour."</a>
-                    
-                    Before starting my PhD, I also worked as a Research Associate at <mark style="background-color:pink;"><a href="https://nyuad.nyu.edu/en/">New York University in Abu Dhabi</a></mark>. 
-                    This experience resulted in several important projects of my career in the field of <i>Science of Science</i>, in collaboration with
-                    <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/bedoor-alshebli.html">Bedoor AlShebli</a>. 
-                    <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/kinga-makovi.html">Kinga R. Makovi</a>, 
-                    <a href="https://nyuad.nyu.edu/en/academics/divisions/science/faculty/talal-rahwan.html">Talal Rahwan</a>, 
-                    and <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/wifag-adnan.html">Wifag Adnan</a>.
-                </p>
-                
+
                 <p>
-                    <i>Future: </i>I have been fortunate enough to find amazing and caring advisors and collaborators who took a leap of faith to support and guide me, and collectively shaped my interests, and 
-                    gave me opportunities to tackle interesting questions. I try to optimize for long-term collaborations and mentorship. I also often think about the implications of my research, 
-                    and hope to eventually be able make some difference in the world --  the world where impact is not just measured by citations  (though, hey, I wouldn't say no to a few of those either!). 
-                
+                    I care about science and education. Science has been considered a deeply human enterprise, shaped by curiosity, collaboration, politics, and institutions. AI, like other technologies of the past, is entering and mediating that world, and with it come new possibilities and new tensions, around its agency and its place in the knowledge production process. My work tries to understand what happens at that intersection. Two areas anchor this: <b>AI Governance</b>, and <b>Science of Science and Innovation</b>.
+                </p>
+
+                <p>
+                    A part of my research looks at science as a social system. Using large-scale datasets, I study how collaboration networks, reputation, geopolitics, and emerging technologies influence how knowledge is produced, certified, and recognized. This perspective treats science as a social system that evolves with its tools and its people. I try to force myself to think about what future infrastructure of science would/should look like. Can we create anticipatory governance for them? Science of science (my home field) is mostly a retrospective field; can we add a proactive lens?
+                </p>
+
+                <p>
+                    Increasingly, I explore how AI is becoming part of that practice. I study how AI tools affect scientific discovery, how they reshape ideas of authorship and expertise, and whether autonomous AI agents might one day participate in research communities alongside humans. I think of this emerging area as the "Science of Machine (-mediated) Science."
+                </p>
+
+                <p>
+                    Part of my work focuses on the governance of AI itself. Here I examine how norms, rules, and "spheres of influence" form around AI use, especially in education and research. I am interested in how institutions decide what counts as responsible AI, how ethical frameworks emerge, and how different actors shape those decisions. But not just understanding these dynamics, but also taking a step further to make interesting (causal) claims and prescriptions.
+                </p>
+
+                <p>
+                    These two strands are connected by a shared concern: the relationship between technology and human judgment. The way AI transforms science depends on the norms and governance structures we build around it. And meaningful governance requires a clear understanding of how AI is actually changing everyday practices.
                 </p>
                 
-                <p></p>
+                <details class="bio-fold">
+                    <summary>Past</summary>
+                    <p>
+                    I did my Master's at <mark style="background-color:pink;"><a href="https://lti.cs.cmu.edu/">Language Technologies Institute (LTI) at Carnegie Mellon University</a></mark> in the lovely (and chilly) Pittsburgh, where I was lucky to be mentored by
+                    <a href="http://mlsp.cs.cmu.edu/people/bhiksha/">Bhiksha Raj</a>, and
+                    <a href="http://www.cs.cmu.edu/~rsingh/">Rita Singh</a> on various directed research projects in the field of <i>Speech Processing</i> and
+                    <i>Voice Forensics</i>.
+                    I also completed a Master's thesis on <a href="https://kilthub.cmu.edu/articles/thesis/Characterizing_Misinformed_Online_Health_Communities/12988244/1">"Characterizing Misinformed Online Health Communities."</a>
+                    under the guidance of <a href="http://www.casos.cs.cmu.edu/bios/carley/carley.html">Kathleen M. Carley</a> and <a href="https://www.cs.cmu.edu/~dmortens/">David R. Mortensen</a>.
+
+                    My Bachelor's was in <i>Computer Science</i> from <mark style="background-color:pink;"><a href="https://www.qatar.cmu.edu/">Carnegie Mellon University in Qatar</a></mark> where I was mentored by
+                    <a href="https://ingmarweber.de/">Ingmar Weber</a> and <a href="https://scholar.google.com/citations?user=LeBn5rAAAAAJ&hl=en">Saquib Razak</a> for
+                    my undergraduate thesis on <a href="https://www.jmir.org/2020/1/e13347/">"Lifestyle Disease Surveillance Using Population Search Behaviour."</a>
+
+                    Before starting my PhD, I also worked as a Research Associate at <mark style="background-color:pink;"><a href="https://nyuad.nyu.edu/en/">New York University in Abu Dhabi</a></mark>.
+                    This experience resulted in several important projects of my career in the field of <i>Science of Science</i>, in collaboration with
+                    <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/bedoor-alshebli.html">Bedoor AlShebli</a>.
+                    <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/kinga-makovi.html">Kinga R. Makovi</a>,
+                    <a href="https://nyuad.nyu.edu/en/academics/divisions/science/faculty/talal-rahwan.html">Talal Rahwan</a>,
+                    and <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/wifag-adnan.html">Wifag Adnan</a>.
+                    </p>
+                </details>
+
+                <details class="bio-fold">
+                    <summary>Future</summary>
+                    <p>
+                    I have been fortunate enough to find amazing and caring advisors and collaborators who took a leap of faith to support and guide me, and collectively shaped my interests, and
+                    gave me opportunities to tackle interesting questions. I try to optimize for long-term collaborations and mentorship. I also often think about the implications of my research,
+                    and hope to eventually be able make some difference in the world --  the world where impact is not just measured by citations  (though, hey, I wouldn't say no to a few of those either!).
+                    </p>
+                </details>
+
+                <p>
                     I'm always open to collaboration and discussions. So don't hesitate to reach out if you would like to collaborate with me, or just talk about life.
                 </p>
-                
-                <p></p>
+                <p>
                     Prospective PhD applicants, especially those from underrepresented backgrounds, are more than welcome to email me about questions related to the application process or PhD experience. :)
                 </p>
                 
