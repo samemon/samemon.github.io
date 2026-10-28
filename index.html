@@ -309,31 +309,14 @@
         <div class="row mb-3">
             <div class="col-xl-8 col-lg-8 col-md-8">
 
-                <p>
-                    Hi. I am a PhD candidate at the <mark style="background-color:pink;"><a href="https://ischool.uw.edu/">Information School in University of Washington</a></mark> advised by <a href="https://jevinwest.org/">Jevin D. West</a>.
-                    My research is funded by the <mark style="background-color:pink;"><a href="https://www.cip.uw.edu/">Center for an Informed Public</a></mark>, and can be broadly classified into <a href="https://en.wikipedia.org/wiki/Computational_social_science"><i>Computational Social Science</i></a>.
-                </p>
+                <div id="intro-content">
+                    <p><em>Loading…</em></p>
+                </div>
 
-                <p>
-                    Science has been (and arguably is) a deeply human activity, shaped by curiosity, collaboration, lots of politics, &amp; institutions. AI is now mediating many of its processes, and with this change come new possibilities and new tensions, around its agency and its place in the knowledge production process. This is largely where my work lives: broadly, <b>"AI Governance"</b> and <b>"Science of Science and Innovation"</b>.
-                </p>
+                <figure style="margin: 20px 0 30px; text-align: center;">
+                    <img src="/image/main_fig1_state_citation_network.png" alt="State citation network showing how U.S. states' AI guidance for K-12 education cite and adopt from one another" style="max-width: 100%;">
+                </figure>
 
-                <p>
-                    A part of my research looks at science as a social system. Using large-scale datasets, I study how collaboration networks, reputation, geopolitics, and emerging technologies influence how knowledge is produced, certified, and recognized. This perspective treats science as a social system that evolves with its tools and its people. I try to force myself to think about what future infrastructure of science would/should look like. Can we create anticipatory governance for them? Science of science (my home field) is mostly a retrospective field; can we add a proactive lens, perhaps using Fiction, a <a href="https://www.linkedin.com/feed/update/urn:li:activity:7486114164588019712/">"Fiction Science of Science"</a> (FiSciSci — yes, I am very proud of that acronym)?
-                </p>
-
-                <p>
-                    Increasingly, I explore how AI is becoming part of that practice. I study how AI tools affect scientific discovery, how they reshape ideas of authorship and expertise, and whether autonomous AI agents might one day participate in research communities alongside humans. I think of this emerging area as the "Science of Machine (-mediated) Science."
-                </p>
-
-                <p>
-                    Part of my work focuses on the governance of AI itself. Here I examine how norms, rules, and "spheres of influence" form around AI use, especially in education and research. I am interested in how institutions decide what counts as responsible AI, how ethical frameworks emerge, and how different actors shape those decisions. But not just understanding these dynamics, but also taking a step further to make interesting (causal) claims and prescriptions.
-                </p>
-
-                <p>
-                    These two strands are connected by a shared concern: the relationship between technology and human judgment. The way AI transforms science depends on the norms and governance structures we build around it. And meaningful governance requires a clear understanding of how AI is actually changing everyday practices.
-                </p>
-                
                 <details class="bio-fold">
                     <summary>Past</summary>
                     <p>
@@ -1333,6 +1316,24 @@
     document.querySelectorAll('.email-anchor').forEach(function(a) {
         a.href = 'mailto:' + ['shahan', 'nyu.edu'].join('@');
     });
+</script>
+
+<!-- Intro paragraph is written in intro.md and rendered here, so it can be edited
+     as plain Markdown without touching this HTML file. -->
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script>
+    fetch('/intro.md')
+        .then(function (r) {
+            if (!r.ok) throw new Error('intro.md not found (' + r.status + ')');
+            return r.text();
+        })
+        .then(function (md) {
+            document.getElementById('intro-content').innerHTML = marked.parse(md);
+        })
+        .catch(function (err) {
+            document.getElementById('intro-content').innerHTML =
+                '<p style="color:#a00;">Could not load intro.md (' + err.message + ').</p>';
+        });
 </script>
 
 </html>
