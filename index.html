@@ -309,7 +309,7 @@
         <div class="row mb-3">
             <div class="col-xl-8 col-lg-8 col-md-8">
 
-                <div id="intro-content">
+                <div id="bio-intro-content">
                     <p><em>Loading…</em></p>
                 </div>
 
@@ -317,44 +317,7 @@
                     <img src="/image/main_fig1_state_citation_network.png" alt="State citation network showing how U.S. states' AI guidance for K-12 education cite and adopt from one another" style="max-width: 100%;">
                 </figure>
 
-                <details class="bio-fold">
-                    <summary>Past</summary>
-                    <p>
-                    I did my Master's at <mark style="background-color:pink;"><a href="https://lti.cs.cmu.edu/">Language Technologies Institute (LTI) at Carnegie Mellon University</a></mark> in the lovely (and chilly) Pittsburgh, where I was lucky to be mentored by
-                    <a href="http://mlsp.cs.cmu.edu/people/bhiksha/">Bhiksha Raj</a>, and
-                    <a href="http://www.cs.cmu.edu/~rsingh/">Rita Singh</a> on various directed research projects in the field of <i>Speech Processing</i> and
-                    <i>Voice Forensics</i>.
-                    I also completed a Master's thesis on <a href="https://kilthub.cmu.edu/articles/thesis/Characterizing_Misinformed_Online_Health_Communities/12988244/1">"Characterizing Misinformed Online Health Communities."</a>
-                    under the guidance of <a href="http://www.casos.cs.cmu.edu/bios/carley/carley.html">Kathleen M. Carley</a> and <a href="https://www.cs.cmu.edu/~dmortens/">David R. Mortensen</a>.
-
-                    My Bachelor's was in <i>Computer Science</i> from <mark style="background-color:pink;"><a href="https://www.qatar.cmu.edu/">Carnegie Mellon University in Qatar</a></mark> where I was mentored by
-                    <a href="https://ingmarweber.de/">Ingmar Weber</a> and <a href="https://scholar.google.com/citations?user=LeBn5rAAAAAJ&hl=en">Saquib Razak</a> for
-                    my undergraduate thesis on <a href="https://www.jmir.org/2020/1/e13347/">"Lifestyle Disease Surveillance Using Population Search Behaviour."</a>
-
-                    Before starting my PhD, I also worked as a Research Associate at <mark style="background-color:pink;"><a href="https://nyuad.nyu.edu/en/">New York University in Abu Dhabi</a></mark>.
-                    This experience resulted in several important projects of my career in the field of <i>Science of Science</i>, in collaboration with
-                    <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/bedoor-alshebli.html">Bedoor AlShebli</a>.
-                    <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/kinga-makovi.html">Kinga R. Makovi</a>,
-                    <a href="https://nyuad.nyu.edu/en/academics/divisions/science/faculty/talal-rahwan.html">Talal Rahwan</a>,
-                    and <a href="https://nyuad.nyu.edu/en/academics/divisions/social-science/faculty/wifag-adnan.html">Wifag Adnan</a>.
-                    </p>
-                </details>
-
-                <details class="bio-fold">
-                    <summary>Future</summary>
-                    <p>
-                    I have been fortunate enough to find amazing and caring advisors and collaborators who took a leap of faith to support and guide me, and collectively shaped my interests, and
-                    gave me opportunities to tackle interesting questions. I try to optimize for long-term collaborations and mentorship. I also often think about the implications of my research,
-                    and hope to eventually be able make some difference in the world --  the world where impact is not just measured by citations  (though, hey, I wouldn't say no to a few of those either!).
-                    </p>
-                </details>
-
-                <p>
-                    I'm always open to collaboration and discussions. So don't hesitate to reach out if you would like to collaborate with me, or just talk about life.
-                </p>
-                <p>
-                    Prospective PhD applicants, especially those from underrepresented backgrounds, are more than welcome to email me about questions related to the application process or PhD experience. :)
-                </p>
+                <div id="bio-rest-content"></div>
                 
                 <!-- <li class="list-inline-item"><a href="https://www.semanticscholar.org/author/S.-A.-Memon/20609745?sort=pub-date"><i class="ai ai-semantic-scholar"></i> Semantic Scholar</a></li>
                 <li class="list-inline-item"><a href="https://dblp.org/pid/203/0185.html"><i class="ai ai-dblp"></i> DBLP</a></li> -->
@@ -1318,21 +1281,71 @@
     });
 </script>
 
-<!-- Intro paragraph is written in intro.md and rendered here, so it can be edited
-     as plain Markdown without touching this HTML file. -->
+<!-- Whole bio (intro + Past + Future + closing lines) is written in bio.md and
+     rendered here, so it can be edited as plain Markdown without touching this
+     HTML file. Convention inside bio.md:
+       - Everything before the first "## Past" heading = always-visible intro.
+       - "## Past" / "## Future" sections become collapsible <details> blocks.
+       - A "---" divider inside a section ends the collapsible part; anything
+         after it (until the next heading) is always-visible again. -->
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 <script>
-    fetch('/intro.md')
+    fetch('/bio.md')
         .then(function (r) {
-            if (!r.ok) throw new Error('intro.md not found (' + r.status + ')');
+            if (!r.ok) throw new Error('bio.md not found (' + r.status + ')');
             return r.text();
         })
         .then(function (md) {
-            document.getElementById('intro-content').innerHTML = marked.parse(md);
+            var temp = document.createElement('div');
+            temp.innerHTML = marked.parse(md);
+            var nodes = Array.prototype.slice.call(temp.childNodes);
+
+            var introFrag = document.createDocumentFragment();
+            var restFrag = document.createDocumentFragment();
+            var i = 0;
+
+            // Everything up to the first H2 is the always-visible intro.
+            while (i < nodes.length && nodes[i].tagName !== 'H2') {
+                introFrag.appendChild(nodes[i]);
+                i++;
+            }
+
+            // From here on: each H2 starts a collapsible <details>, which ends
+            // at the next H2 or at an <hr> (an <hr> hands remaining content,
+            // up to the next H2, back to always-visible).
+            while (i < nodes.length) {
+                var node = nodes[i];
+                if (node.tagName === 'H2') {
+                    var details = document.createElement('details');
+                    details.className = 'bio-fold';
+                    var summary = document.createElement('summary');
+                    summary.textContent = node.textContent.trim();
+                    details.appendChild(summary);
+                    i++;
+                    while (i < nodes.length && nodes[i].tagName !== 'H2' && nodes[i].tagName !== 'HR') {
+                        details.appendChild(nodes[i]);
+                        i++;
+                    }
+                    restFrag.appendChild(details);
+                    if (i < nodes.length && nodes[i].tagName === 'HR') {
+                        i++; // drop the <hr> marker itself
+                    }
+                } else {
+                    restFrag.appendChild(node);
+                    i++;
+                }
+            }
+
+            var introEl = document.getElementById('bio-intro-content');
+            var restEl = document.getElementById('bio-rest-content');
+            introEl.innerHTML = '';
+            introEl.appendChild(introFrag);
+            restEl.innerHTML = '';
+            restEl.appendChild(restFrag);
         })
         .catch(function (err) {
-            document.getElementById('intro-content').innerHTML =
-                '<p style="color:#a00;">Could not load intro.md (' + err.message + ').</p>';
+            document.getElementById('bio-intro-content').innerHTML =
+                '<p style="color:#a00;">Could not load bio.md (' + err.message + ').</p>';
         });
 </script>
 
