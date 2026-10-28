@@ -20,6 +20,4 @@ I have been fortunate enough to find amazing and caring advisors and collaborato
 
 ---
 
-I'm always open to collaboration and discussions. So don't hesitate to reach out if you would like to collaborate with me, or just talk about life.
-
-Prospective PhD applicants, especially those from underrepresented backgrounds, are more than welcome to email me about questions related to the application process or PhD experience. :)
+I remain convinced that the most interesting ideas emerge in conversation. If you are thinking about similar questions, or just want to talk about life, don't hesitate to reach out. Prospective PhD applicants, especially those from underrepresented backgrounds, are more than welcome to email me about questions related to the application process or PhD experience. :)
